@@ -2,6 +2,10 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
+# Create your models here.
+class Greeting(models.Model):
+    when = models.DateTimeField("date created", auto_now_add=True)
+
 class Room(models.Model):
     title = models.CharField(max_length=50)
     content = models.TextField()

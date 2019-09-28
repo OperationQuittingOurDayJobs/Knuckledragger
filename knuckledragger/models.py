@@ -14,14 +14,12 @@ class Room(models.Model):
     def __str__(self):
         return self.title
 
-
+# GAME MODELS
 class Status(models.Model):
     state = models.CharField(max_length = 16, default = 'normal')
 
-
 class Rarity(models.Model):
     quality = models.CharField(max_length = 16, default = 'mundane')
-
 
 class Item(models.Model):
     weight = models.FloatField(default = 0)
@@ -39,3 +37,4 @@ class Item(models.Model):
         return self.name
 
 
+# Don't forget to register models and commit changes to server!!!

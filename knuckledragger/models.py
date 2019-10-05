@@ -95,17 +95,6 @@ class Races(models.Model):
 class Brawny(models.Model):
     type = models.ForeignKey(Type, on_delete = models.CASCADE)
 
-class Character(models.Model):
-    race = models.ForeignKey(Races, on_delete = models.CASCADE)
-    attributes = models.ForeignKey(Attributes, on_delete = models.CASCADE)
-    inventory = models.ForeignKey(Inventory, on_delete = models.CASCADE)
-    weight = models.PositiveSmallIntegerField(default = 0)
-    age = models.PositiveSmallIntegerField(default = 0)
-    hit_points = models.PositiveSmallIntegerField(default = 0)
-    name = models.CharField(max_length = 16)
-    #connections
-    speed = models.PositiveSmallIntegerField(default = 0)
-
 class Inventory(models.Model):
     head = models.BooleanField()
     neck = models.BooleanField()
@@ -119,3 +108,15 @@ class Inventory(models.Model):
     feet = models.BooleanField()
     accessory = models.BooleanField()
     wallet = models.PositiveSmallIntegerField(default = 0)
+
+
+class Character(models.Model):
+    race = models.ForeignKey(Races, on_delete = models.CASCADE)
+    attributes = models.ForeignKey(Attributes, on_delete = models.CASCADE)
+    inventory = models.ForeignKey(Inventory, on_delete = models.CASCADE)
+    weight = models.PositiveSmallIntegerField(default = 0)
+    age = models.PositiveSmallIntegerField(default = 0)
+    hit_points = models.PositiveSmallIntegerField(default = 0)
+    name = models.CharField(max_length = 16)
+    #connections
+    speed = models.PositiveSmallIntegerField(default = 0)

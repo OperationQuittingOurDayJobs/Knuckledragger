@@ -96,17 +96,17 @@ class Brawny(models.Model):
     type = models.ForeignKey(Type, on_delete = models.CASCADE)
 
 class Inventory(models.Model):
-    head = models.BooleanField()
-    neck = models.BooleanField()
-    shoulder = models.BooleanField()
-    chest = models.BooleanField()
-    arm = models.BooleanField()
-    hand = models.BooleanField()
-    belt = models.BooleanField()
-    waist = models.BooleanField()
-    leg = models.BooleanField()
-    feet = models.BooleanField()
-    accessory = models.BooleanField()
+    head = models.BooleanField(default = false)
+    neck = models.BooleanField(default = false)
+    shoulder = models.BooleanField(default = false)
+    chest = models.BooleanField(default = false)
+    arm = models.BooleanField(default = false)
+    hand = models.BooleanField(default = false)
+    belt = models.BooleanField(default = false)
+    waist = models.BooleanField(default = false)
+    leg = models.BooleanField(default = false)
+    feet = models.BooleanField(default = false)
+    accessory = models.BooleanField(default = false)
     wallet = models.PositiveSmallIntegerField(default = 0)
 
 

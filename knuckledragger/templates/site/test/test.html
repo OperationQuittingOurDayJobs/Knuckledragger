@@ -3,25 +3,30 @@
 
 {% block content %}
 
-<form action="">
-    <div class="form-group">
-        <ul>
-            {% for character in characterList %}
+<div class="container">
+    <h1 class="display-4">Testing Console</h1>
+    <p class="lead">If you're here there's only one thing to do</p>
+    <p class="lead">Fight, cowards!</p>
+    <form action="">
+        <div class="form-group">
+            <ul>
+                {% for character in characterList %}
                 <li>{{ character.first_name }} {{ character.last_name }}</li>
-            {% endfor %}
-        </ul>
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group mr-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-secondary">Attack</button>
-            </div>
-            <div class="btn-group mr-2" role="group" aria-label="Second group">
-                <button type="button" class="btn btn-secondary">Heal</button>
-            </div>
-            <div class="btn-group" role="group" aria-label="Third group">
-                <button type="button" class="btn btn-secondary">Action</button>
+                {% endfor %}
+            </ul>
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-secondary">Attack</button>
+                </div>
+                <div class="btn-group mr-2" role="group" aria-label="Second group">
+                    <button type="button" class="btn btn-secondary">Heal</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Third group">
+                    <button type="button" class="btn btn-secondary">Action</button>
+                </div>
             </div>
         </div>
-    </div>
-</form>
+    </form>
+</div>
 
 {% endblock %}

@@ -15,5 +15,6 @@ import knuckledragger.views
 
 urlpatterns = [
     path("", knuckledragger.views.index, name="index"),
+    path("test/", knuckledragger.views.test, name="test"),
     path("admin/", admin.site.urls),
 ]

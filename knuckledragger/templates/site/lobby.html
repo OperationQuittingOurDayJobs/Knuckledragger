@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Lobby</h1>
+        <p class="lead">Fight Cowards!</p>
+    </div>
+    <ul class="list-group">
+        {% for room in rooms %}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ room.room_name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Created by: {{ room.authored_by }}</h6>
+                <p class="card-text">{{ room.description }}</p>
+                <a href="#" class="card-link">Apply</a>
+            </div>
+        </div>
+        {% endfor %}
+    </ul>
+    <div class="mb-4"></div>
+    <button type="button" class="btn btn-success">Make Room</button>
+</div>
+
+{% endblock %}

@@ -1,7 +1,5 @@
-from django.db import models
-from django.utils import timezone
-from django.contrib.auth.models import User
 from django import forms
 
-from .models import Character
-
+class MakeAttack(forms.Form):
+    name = forms.CharField(label="Name", max_length=16)
+    check = forms.BooleanField()

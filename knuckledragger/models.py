@@ -74,3 +74,13 @@ class Character(models.Model):
         return self.first_name + self.last_name
 
 # TODO add Skills model
+
+
+
+class Room(models.Model):
+    room_name = models.CharField(max_length=16)
+    authored_by = models.ForeignKey(Character, on_delete=models.CASCADE)
+    description = models.CharField(max_length=200)
+    # date_created
+    # max_players
+    # datetime_played

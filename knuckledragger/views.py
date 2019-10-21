@@ -6,17 +6,9 @@ from .actions import MakeAttack
 import requests, os
 
 
-@login_required
-def index(request):
-    return render(request, 'site/index.html')
 
-
-@login_required
-def lobby(request):
-    context = {
-        'rooms': Room.objects.all()
-    }
-    return render(request, 'site/lobby.html', context)
+def landing(request):
+    return render(request, 'site/landing.html')
 
 
 class lobby(ListView):
@@ -26,10 +18,32 @@ class lobby(ListView):
     # ordering = ['-date_created']
 
 
+class room(ListView):
+    model = Room
+    template_name = 'site/room.html'
+    text_object_name = 'room'
+
+
 @login_required
-def test(request):
-    return render(request, 'site/test/test.html')
+def create_item(request):
+    return render(request, 'create/item.html')
 
 
-# Inside this file, the view, we are going to import our forms.
-# We will use that form inside the request 'attack'
+@login_required
+def create_npc(request):
+    return render(request, 'create/npc.html')
+
+
+@login_required
+def create_pc(request):
+    return render(request, 'create/pc.html')
+
+
+@login_required
+def create_room(request):
+    return render(request, 'create/room.html')
+
+
+@login_required
+def create(request):
+    return render(request, 'create/create.html')

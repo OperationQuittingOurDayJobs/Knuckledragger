@@ -75,12 +75,19 @@ class Character(models.Model):
 
 # TODO add Skills model
 
-
+class Schedule(models.Model):
+    sunday = models.BooleanField(default=False)
+    monday = models.BooleanField(default=False)
+    tuesday = models.BooleanField(default=False)
+    wednesday = models.BooleanField(default=False)
+    thursday = models.BooleanField(default=False)
+    friday = models.BooleanField(default=False)
+    saturday = models.BooleanField(default=False)
+    time = models.TimeField()
 
 class Room(models.Model):
     room_name = models.CharField(max_length=16)
-    authored_by = models.ForeignKey(Character, on_delete=models.CASCADE)
+    authored_by = models.ForeignKey(User, on_delete=models.CASCADE)
     description = models.CharField(max_length=200)
-    # date_created
-    # max_players
-    # datetime_played
+    date_created = models.DateField(auto_now_add=True)
+    max_players = models.PositiveSmallIntegerField(default=4)

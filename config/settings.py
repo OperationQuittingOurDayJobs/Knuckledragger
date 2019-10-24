@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "knuckledragger",
     "users",
+    "crispy_forms"
 ]
 
 MIDDLEWARE = [

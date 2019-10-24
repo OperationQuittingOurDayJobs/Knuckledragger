@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 from django.contrib.auth.decorators import login_required
-# from .models import Character, Room
+from .models import Character, Room
 from .actions import MakeAttack
 import requests, os
 
@@ -12,14 +12,14 @@ def landing(request):
 
 
 class lobby(ListView):
-    model = 'fake room'
-    # template_name = 'site/lobby.html'
-    # context_object_name = 'rooms'
-    # ordering = ['-date_created']
+    model = Room
+    template_name = 'site/lobby.html'
+    context_object_name = 'rooms'
+    ordering = ['-date_created']
 
 
 class room(ListView):
-    model = 'fake room'
+    model = Room
     template_name = 'site/room.html'
     text_object_name = 'room'
 

@@ -9,12 +9,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['www.knuckledraggerrpg.com']
 
 # Application definition
 INSTALLED_APPS = [
+    "crispy_forms",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -23,7 +24,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "knuckledragger",
     "users",
-    "crispy_forms"
 ]
 
 MIDDLEWARE = [

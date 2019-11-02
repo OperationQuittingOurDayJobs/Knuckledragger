@@ -15,6 +15,8 @@ ALLOWED_HOSTS = ['www.knuckledraggerrpg.com']
 
 # Application definition
 INSTALLED_APPS = [
+    "knuckledragger.apps.KnuckledraggerConfig",
+    "users.apps.UsersConfig",
     "crispy_forms",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -22,8 +24,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "knuckledragger",
-    "users",
 ]
 
 MIDDLEWARE = [

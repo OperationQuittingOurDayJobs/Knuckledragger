@@ -18,10 +18,12 @@
                                     {{ room.room_name }}
                                 </button>
                             </div>
+
                             <!-- Room Author -->
                             <div class="col-sm">
                                 <p class="lead text-muted font-weight-light">{{ room.authored_by }}</p>
                             </div>
+
                             <!-- Room Play Date -->
                             <div class="col-sm">
                                 {% if room.sunday is True %}
@@ -40,6 +42,7 @@
                                 <p class="lead text-muted font-weight-light">Sat, </p>
                                 {% endif %}
                             </div>
+                            
                             <!-- Room Play Time -->
                             <div class="col-sm">
                                 <p class="lead text-muted font-weight-light">{{ room.time }}</p>
@@ -52,6 +55,7 @@
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">{{ room.description }}</div>
             </div>
+
         </div>
         {% endfor %}
     </div>

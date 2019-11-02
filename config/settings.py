@@ -17,7 +17,7 @@ ALLOWED_HOSTS = ['www.knuckledraggerrpg.com']
 INSTALLED_APPS = [
     "knuckledragger.apps.KnuckledraggerConfig",
     "users.apps.UsersConfig",
-    "crispy_forms",
+    # "crispy_forms",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -100,7 +100,7 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static/"
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'lobby'
 LOGIN_URL = 'login'

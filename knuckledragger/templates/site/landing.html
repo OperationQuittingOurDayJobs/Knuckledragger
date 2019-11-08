@@ -1,7 +1,15 @@
-{% load staticfiles %}
-
-{% block content %}
-
-<h1>Landing</h1>
-
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'knuckledragger/landing.css' %}">
+    <title>Knuckledragger RPG</title>
+</head>
+<body class="bg">
+    <h1>Welcome to Knuckledragger RPG</h1>
+    <p class="lead">Fight, Cowards!</p>
+</body>
+</html>

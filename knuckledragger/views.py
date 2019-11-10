@@ -46,6 +46,7 @@ def create_pc(request):
 def create(request):
     return render(request, 'create/create.html')
 
+# TODO Delete me
 
 # FUNCTIONS FOR ROOM #
 from .actions import MeleeAttack
